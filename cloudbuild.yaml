@@ -6,7 +6,7 @@ steps:
       '-t',
       'gcr.io/stoked-coder-404402/GCP-practice:$COMMIT_SHA',
       '.'
-    
+    ]
 
 options:
   logging: CLOUD_LOGGING_ONLY

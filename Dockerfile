@@ -9,11 +9,12 @@ COPY . .
 # ARG GENERIC_ENV_VARIABLE
 # ENV GENERIC_ENV_VARIABLE $GENERIC_ENV_VARIABLE
 RUN npm run build
+CMD ["npm", "run", "start"]
 
 # Step 2: Set up the production environment
-FROM nginx:stable-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# FROM nginx:stable-alpine
+# COPY --from=builder /app/dist /usr/share/nginx/html
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"]
+# EXPOSE 8080
+# CMD ["nginx", "-g", "daemon off;"]

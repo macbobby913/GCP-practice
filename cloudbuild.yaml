@@ -1,4 +1,7 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    script: docker build -t test .
+    script: docker build test .
+
+options:
+  logging: CLOUD_LOGGING_ONLY

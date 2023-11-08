@@ -1,7 +1,12 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    script: docker build test .
+    arg: [
+      'build',
+      '-t',
+      'gcr.io/stoked-coder-404402/GCP-practice:$COMMIT_SHA',
+      '.'
+    ]
 
 options:
   logging: CLOUD_LOGGING_ONLY

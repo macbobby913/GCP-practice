@@ -32,7 +32,6 @@ jobs:
 
       - name: whoami
         run: |
-        whoami
         pwd
         ls -la
 

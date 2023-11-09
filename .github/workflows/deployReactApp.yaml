@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node.js environment  # (will be displayed on github)
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: "18.16.1"
+          node-version: "18.17.1"
 
       # cache the dependencies to speed up the build
       - name: Cache dependencies   # (will be displayed on github)

@@ -42,3 +42,4 @@ jobs:
           path: ./build
           destination: grogu-bucket
           parent: false
+          cacheControl: no-store # Set Cache-Control to 'no-store' to disable caching
